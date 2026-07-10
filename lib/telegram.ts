@@ -17,7 +17,7 @@ interface TgResponse<T> {
   error_code?: number;
 }
 
-async function call<T>(method: string, payload: Record<string, unknown>): Promise<T> {
+async function call<T>(method: string, payload: object): Promise<T> {
   const url = `${config.telegram.apiBase}/bot${config.telegram.botToken}/${method}`;
   try {
     const res = await httpRequest<TgResponse<T>>(url, {
