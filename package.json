@@ -7,7 +7,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build": "tsc --noEmit",
+    "vercel-build": "echo 'Serverless functions only — no static build needed'",
     "typecheck": "tsc --noEmit",
     "dev": "vercel dev",
     "deploy": "vercel --prod",
